@@ -10,6 +10,8 @@ class Users(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
 
     account: Mapped["UserAccounts"] = relationship(back_populates="user")
+    notes: Mapped[list["Notes"]] = relationship(
+        back_populates="user")  # type: ignore
 
 
 class UserAccounts(Base):
