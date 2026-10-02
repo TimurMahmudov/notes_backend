@@ -8,8 +8,7 @@ from alembic import context
 from connection_data.config import settings
 from connection_data.base import Base
 
-from db_models.notes_models import Notes
-from db_models.users_models import Users, UserAccounts
+from db_models import NotesORM, UserAccountsORM, UsersORM
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

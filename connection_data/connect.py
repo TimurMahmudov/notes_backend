@@ -5,7 +5,7 @@ from connection_data.config import settings
 
 async_engine = create_async_engine(
     url=settings.async_db_connection_url,
-    echo=True
+    echo=False
 )
 
 asyncsession = async_sessionmaker(async_engine)
